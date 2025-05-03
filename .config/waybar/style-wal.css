@@ -1,0 +1,124 @@
+@import url("colors-wal.css");
+
+* {
+    font-family: jetbrainsmononf,monospace;
+    font-size: 15px;
+}
+
+#waybar {
+    background-color: alpha(@background, 0.8);
+    color: @foreground;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid @color1;
+}
+
+#custom-logo {
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+.modules-right{
+    background-color: alpha(darker(@color1), 0.6);
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px
+}
+
+#bluetooth,
+#network,
+#cpu,
+#group-power {
+    margin: 5px 0
+}
+
+#network {
+    padding-right: 5px;
+}
+#network.wifi {
+    color: @color2;
+}
+#network.disconnected {
+    color: darker(@color2);
+}
+
+#bluetooth.off {
+    color: darker(@color2);
+}
+#bluetooth.connected {
+    color: @color10;
+}
+
+#custom-power {
+    color: @color10;
+    font-weight: bold;
+    padding-right: 3px
+}
+
+#privacy {
+    color: @color10;
+    font-weight: bold;
+}
+
+#cpu {
+    color: @color9;
+    font-weight: bold;
+    padding-right: 6px;
+    padding-bottom: 5px;
+}
+
+#clock {
+    background-color: alpha(darker(@color1), 0.6);
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#custom-separator {
+    color: alpha(#cdd6f4, 0.3);
+    padding: 0 5px;
+}
+
+#wireplumber.icon {
+    color: @color3;
+    font-weight: bold;
+}
+
+#wireplumber.indic {
+    color: @color3;
+    font-weight: bold;
+    font-size: 12px;
+}
+#wireplumber.icon {
+    padding-right: 7px;
+    padding-bottom: 3px;
+}
+#workspaces {
+    background-color: alpha(darker(@color1), 0.6);
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+#workspaces button {
+    padding: 0px;
+    border-radius: 5px;
+    color: @foreground;
+}
+
+#workspaces button.active {
+    background-color: @color1;
+    border-radius: 5;
+    margin: 0px 3;
+    color: @background;
+    padding-top: 1px;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background-color: #7f849c;
+    border-radius: 5px;
+    margin: 0px 3px;
+    padding-top: 1px;
+    font-weight: bold;
+}

@@ -1,0 +1,135 @@
+@import url("colors-cat.css");
+* {
+    font-family: jetbrainsmononf,monospace;
+    font-size: 15px;
+}
+
+#waybar {
+    background-color: @background;
+    color: @accent;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid @accent
+}
+
+#custom-logo {
+    font-size: 30px;
+    padding-right: 5px;
+    background-color: @layer1;
+    border-radius: 5px;
+    margin: 5px;
+    color: @accent;
+}
+
+.modules-right{
+    background-color: @layer1;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px
+}
+
+#bluetooth,
+#network,
+#cpu,
+#group-power {
+    margin: 5px 0
+}
+
+#network {
+    padding-right: 5px;
+}
+#network.wifi {
+    color: #94e2d5;
+}
+#network.disconnected {
+    color: #f38ba8;
+}
+
+#bluetooth.off {
+    color: #f38ba8
+}
+#bluetooth.connected {
+    color: #74c7ec
+}
+
+#custom-power {
+    color: #f38ba8;
+    font-weight: bold;
+    padding-right: 3px
+}
+
+#privacy {
+    color: #f38ba8;
+    font-weight: bold;
+}
+
+#cpu {
+    color: #fab387;
+    font-weight: bold;
+    padding-right: 6px;
+    padding-bottom: 5px;
+}
+
+#clock {
+    background-color: @layer1;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 5px;
+    color: @accent;
+    font-weight: bold;
+}
+
+#custom-separator {
+    color: alpha(#cdd6f4, 0.3);
+    padding: 0 5px;
+}
+
+#wireplumber.icon {
+    color: #f9e2af;
+    font-weight: bold;
+}
+
+#wireplumber.indic {
+    color: #f9e2af;
+    font-weight: bold;
+    font-size: 12px;
+}
+#wireplumber.icon {
+    padding-right: 7px;
+    padding-bottom: 3px;
+}
+#workspaces {
+    background-color: @layer1;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px;
+}
+
+#workspaces button {
+    background-color: @layer1;
+    padding: 0px;
+    border-radius: 5px;
+    color: @text;
+}
+
+#workspaces button.active {
+    background-color: @accent;
+    border-radius: 5;
+    margin: 0px 3;
+    color:#1e1e2e;
+    padding-top: 1px;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background-color: #7f849c;
+    border-radius: 5px;
+    margin: 0px 3px;
+    padding-top: 1px;
+    font-weight: bold;
+}
+
+#custom-swaync {
+    padding-bottom: 5px;
+    padding-right: 3px;
+}
