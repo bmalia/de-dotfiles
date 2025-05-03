@@ -45,4 +45,4 @@ This setup assumes you have at least basic knowlege of window managers, Arch, an
 5. Get everything enabled \
 [TBA]
 > [!NOTE]
-> My Hyprlock config uses a licensed font: Swear Display. If you don't own this font, you'll need to switch it out for something you do. This can be done by changing the `clock-font` variable in `hyprlock.config`.
+> My Hyprlock config uses a licensed font: Swear Display. If you don't own this font, you'll need to switch it out for something you do. This can be done by changing the `clock-font` variable in `hyprlock.conf`.
