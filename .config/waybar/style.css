@@ -1,135 +1,137 @@
-@import url("colors-cat.css");
+@import url("colors/colors-mat.css");
+
 * {
-    font-family: jetbrainsmononf,monospace;
-    font-size: 15px;
+    font-family: Adwaita Sans, JetBrainsMono Nerd Font, sans-serif;
 }
 
 #waybar {
     background-color: @background;
     color: @accent;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid @accent
+    border-radius: 8px;
 }
 
 #custom-logo {
     font-size: 30px;
-    padding-right: 5px;
-    background-color: @layer1;
-    border-radius: 5px;
-    margin: 5px;
-    color: @accent;
+    margin-left: 10px;
+    margin-right: 6px;
+    color: @primary;
 }
 
-.modules-right{
-    background-color: @layer1;
-    padding: 5px 0;
-    border-radius: 5px;
-    margin: 5px
-}
-
-#bluetooth,
-#network,
-#cpu,
-#group-power {
-    margin: 5px 0
-}
-
-#network {
-    padding-right: 5px;
-}
-#network.wifi {
-    color: #94e2d5;
-}
-#network.disconnected {
-    color: #f38ba8;
-}
-
-#bluetooth.off {
-    color: #f38ba8
-}
-#bluetooth.connected {
-    color: #74c7ec
-}
-
-#custom-power {
-    color: #f38ba8;
+#custom-slash {
+    font-size: 25px;
+    margin: 0 2px;
     font-weight: bold;
-    padding-right: 3px
+    color: alpha(@on_background, 0.3);
 }
 
-#privacy {
-    color: #f38ba8;
+#windowgroup {
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+#window.title {
+    font-size: 14px;
     font-weight: bold;
+    color: @on_background;
 }
 
-#cpu {
-    color: #fab387;
-    font-weight: bold;
-    padding-right: 6px;
-    padding-bottom: 5px;
+#window.app {
+    font-size: 13px;
+    color: alpha(@on_background, 0.5);
 }
 
-#clock {
-    background-color: @layer1;
-    padding: 5px 0;
-    border-radius: 5px;
-    margin: 5px;
-    color: @accent;
-    font-weight: bold;
-}
-
-#custom-separator {
-    color: alpha(#cdd6f4, 0.3);
-    padding: 0 5px;
-}
-
-#wireplumber.icon {
-    color: #f9e2af;
-    font-weight: bold;
-}
-
-#wireplumber.indic {
-    color: #f9e2af;
-    font-weight: bold;
-    font-size: 12px;
-}
-#wireplumber.icon {
-    padding-right: 7px;
-    padding-bottom: 3px;
-}
 #workspaces {
-    background-color: @layer1;
-    border-radius: 5px;
-    padding: 5px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: @surface_container;
+    border-radius: 8px;
+    color: @on_surface;
+    font-size: 14px;
+    padding: 0;
     margin: 5px;
+}
+
+#workspaces button.empty {
+    background-color: @surface_container;
+    color: alpha(@on_surface, 0.5);
+    padding: 4px;
+    margin: 0 2px;
 }
 
 #workspaces button {
-    background-color: @layer1;
-    padding: 0px;
-    border-radius: 5px;
-    color: @text;
+    background-color: @primary_container;
+    color: @on_primary_container;
+    border-radius: 50px;
+    padding: 4px;
+    margin: 0 2px;
 }
 
+#workspaces button.visible {
+    background-color: @secondary;
+    color: @on_secondary;
+}
 #workspaces button.active {
-    background-color: @accent;
-    border-radius: 5;
-    margin: 0px 3;
-    color:#1e1e2e;
-    padding-top: 1px;
-    font-weight: bold;
+    background-color: @primary;
+    color: @on_primary;
 }
 
-#workspaces button:hover {
-    background-color: #7f849c;
-    border-radius: 5px;
-    margin: 0px 3px;
-    padding-top: 1px;
-    font-weight: bold;
+#clock {
+    background-color: @surface_container;
+    padding: 0 5px;
+    border-radius: 8px;
+    margin: 5px;
+    color: @on_surface;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#power {
+    padding-right: 5px;
+    margin: 0 3px;
+}
+
+#custom-shutdown,
+#custom-reboot,
+#custom-suspend,
+#custom-quit,
+#custom-lock {
+    margin: 4px;
+    color: @on_background;
+}
+
+#custom-shutdown {
+    color: @secondary;
+}
+
+.modules-right {
+    color: @on_background;
+    
+}
+
+#pipewire,
+#bluetooth {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+#bluetooth {
+    font-size: 15px;
+}
+
+#bluetooth.off {
+    color: @error;
+}
+
+#bluetooth.connected {
+    color: @tertiary;
+}
+
+#pipewire {
+    color: @primary;
 }
 
 #custom-swaync {
-    padding-bottom: 5px;
-    padding-right: 3px;
+    margin: 0 10px;
+    font-size: 15px;
 }

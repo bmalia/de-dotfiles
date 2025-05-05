@@ -1,0 +1,152 @@
+{
+  /* BAR */
+  "layer": "top",
+  "position": "top",
+
+  "margin-bottom": 0,
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-top": 8,
+  "reload_style_on_change": true,
+
+  /* LAYOUT */
+  "modules-left": ["custom/logo", "custom/slash", "group/windowgroup"],
+  "modules-center": ["hyprland/workspaces", "clock"],
+  "modules-right": [
+    "tray",
+    "bluetooth",
+    "wireplumber",
+    "custom/swaync",
+    "group/power"
+  ],
+
+  /* MODULES */
+  // Left
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "walker"
+  },
+
+  "custom/slash": {
+    "format": "/",
+    "tooltip": false
+  },
+  "group/windowgroup": {
+    "orientation": "orthogonal",
+    "modules": ["hyprland/window#app", "hyprland/window#title"]
+  },
+  "hyprland/window#app": {
+    "format": "{class}",
+    "rewrite": {
+      "code": "VSCode",
+      "firefox": "Firefox",
+      "discord": "Discord",
+      "kitty": "Kitty",
+      "steam": "Steam",
+      "zen": "Zen",
+      "org.inkscape.Inkscape": "Inkscape",
+      "org.gnome.Nautilus": "Nautilus"
+    }
+  },
+  "hyprland/window#title": {
+    "format": "{title}",
+    "tooltip": false,
+    "rewrite": {
+      "(.*) - Visual Studio Code$": "$1",
+      "(.*)--Zen Browser$": "$1",
+      "(.*) - Discord$": "$1"
+    }
+  },
+
+  // Center
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 10
+    }
+  },
+  "clock": {
+    "format": "{:%I:%M • %A, %m/%d}"
+  },
+  // Right
+  "tray": {
+    "spacing": 10,
+    "reverse-direction": true
+  },
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-connected": "󰂱",
+    "tooltip-format-on": "Enabled, no devices",
+    "tooltip-format-off": "Disabled",
+    "tooltip-format-connected": "Connected, {device_alias}",
+    "on-click": "bzmenu -l walker"
+  },
+  "wireplumber": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "format-icons": ["", "", ""]
+  },
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/shutdown", // First element is the "group leader" and won't ever be hidden
+      "custom/quit",
+      "custom/lock",
+      "custom/suspend",
+      "custom/reboot"
+    ]
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "hyprlock"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": false,
+    "on-click": "reboot"
+  },
+  "custom/shutdown": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "shutdown now"
+  },
+  "custom/suspend": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl suspend"
+  },
+  "custom/swaync": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰂚<span foreground='red'><sup></sup></span>",
+      "none": "󰂚 ",
+      "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
+      "dnd-none": "󰂛 ",
+      "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "󰂚 ",
+      "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "󰂛 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  
+}

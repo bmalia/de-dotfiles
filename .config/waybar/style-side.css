@@ -1,25 +1,28 @@
-@import url("colors-wal.css");
-
+@import url("colors/colors-cat.css");
 * {
     font-family: jetbrainsmononf,monospace;
     font-size: 15px;
 }
 
 #waybar {
-    background-color: alpha(@background, 0.8);
-    color: @foreground;
+    background-color: @background;
+    color: @accent;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid @color1;
+    border: 2px solid @accent
 }
 
 #custom-logo {
     font-size: 30px;
     padding-right: 5px;
+    background-color: @layer1;
+    border-radius: 5px;
+    margin: 5px;
+    color: @accent;
 }
 
 .modules-right{
-    background-color: alpha(darker(@color1), 0.6);
+    background-color: @layer1;
     padding: 5px 0;
     border-radius: 5px;
     margin: 5px
@@ -36,42 +39,52 @@
     padding-right: 5px;
 }
 #network.wifi {
-    color: @color2;
+    color: #94e2d5;
 }
 #network.disconnected {
-    color: darker(@color2);
+    color: #f38ba8;
 }
 
 #bluetooth.off {
-    color: darker(@color2);
+    color: #f38ba8
 }
 #bluetooth.connected {
-    color: @color10;
+    color: #74c7ec
 }
 
 #custom-power {
-    color: @color10;
+    color: #f38ba8;
     font-weight: bold;
     padding-right: 3px
 }
 
 #privacy {
-    color: @color10;
     font-weight: bold;
+    padding: 5px 0;
+    padding-left: 8px;
+    color: #fab387;
+}
+
+#privacy.share {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    border-radius: 5px;
 }
 
 #cpu {
-    color: @color9;
+    color: #fab387;
     font-weight: bold;
     padding-right: 6px;
     padding-bottom: 5px;
 }
 
 #clock {
-    background-color: alpha(darker(@color1), 0.6);
+    background-color: @layer1;
     padding: 5px 0;
     border-radius: 5px;
     margin: 5px;
+    color: @accent;
+    font-weight: bold;
 }
 
 #custom-separator {
@@ -80,12 +93,12 @@
 }
 
 #wireplumber.icon {
-    color: @color3;
+    color: #f9e2af;
     font-weight: bold;
 }
 
 #wireplumber.indic {
-    color: @color3;
+    color: #f9e2af;
     font-weight: bold;
     font-size: 12px;
 }
@@ -94,23 +107,24 @@
     padding-bottom: 3px;
 }
 #workspaces {
-    background-color: alpha(darker(@color1), 0.6);
+    background-color: @layer1;
     border-radius: 5px;
     padding: 5px 0;
     margin: 5px;
 }
 
 #workspaces button {
+    background-color: @layer1;
     padding: 0px;
     border-radius: 5px;
-    color: @foreground;
+    color: @text;
 }
 
 #workspaces button.active {
-    background-color: @color1;
+    background-color: @accent;
     border-radius: 5;
     margin: 0px 3;
-    color: @background;
+    color:#1e1e2e;
     padding-top: 1px;
     font-weight: bold;
 }
@@ -121,4 +135,13 @@
     margin: 0px 3px;
     padding-top: 1px;
     font-weight: bold;
+}
+
+#custom-swaync {
+    padding-bottom: 5px;
+    padding-right: 3px;
+}
+
+#tray > .active {
+    padding: 5px
 }

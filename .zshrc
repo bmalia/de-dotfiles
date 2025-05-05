@@ -105,5 +105,3 @@ setopt no_auto_menu  # require an extra TAB press to open the completion menu
 fortune | cowsay
 
 eval $(thefuck --alias)
-
-(cat ~/.cache/wal/sequences &)
